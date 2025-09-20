@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Showcase: My Basic Info</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script defer src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+        body {
+            background-color: paleturquoise;
+            font-family: fantasy;
+            margin: 30px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 8px 14px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h2">My Basic Info</h2>
+    <br>
+
+    <label for="Name">Name:</label>
+    <input type="text" id="Name">
+
+    <label for="Age">Age:</label>
+    <input type="number" id="Age">
+
+    <label for="School">School:</label>
+    <input type="text" id="School">
+
+    <br>
+  <button py-click="generate_message">Message</button>
+  </center>
+
+    <div id="output"></div>
+
+    <py-config>
+        [[fetch]]
+        files = ["main.py"]
+    </py-config>
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>
